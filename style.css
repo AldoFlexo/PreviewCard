@@ -55,7 +55,6 @@ body{
 }
 
 .cardInfo__container{
-    width: 50rem;
     width: 33.3rem;
     padding: 2rem 4rem;
     h1{
@@ -102,10 +101,11 @@ body{
         &:hover{
             background-color: var(--Green700);
         }
-        img{
-
-        }
     }
+}
+
+.mainMobile{
+    display: none;
 }
 
 .perfume{
@@ -116,3 +116,38 @@ body{
     line-height: 2.5rem;
 }
 
+@media(max-width: 425px){
+    .card__container{
+        flex-direction: column;
+        height: auto;
+        width: clamp(34rem, -3.5rem + 100vw, 39rem);
+        h1{
+            font-size: 3.1rem;
+            margin: 1rem 0 0 0;
+        }
+    }
+    .cardInfo__container{
+        padding: 2.4rem;
+        width: 100%;
+        .prices__container{
+            margin: 0 0 1.5rem 0;
+            .price{
+                margin: 0;
+            }
+        }
+    }
+    .mainImg{
+        display: none;
+    }
+    .mainMobile{
+        display: block;
+        max-inline-size: 100%;
+        block-size: auto;
+        object-fit: contain;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .perfume{
+        margin: 0;
+    }
+}
